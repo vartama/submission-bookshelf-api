@@ -1,6 +1,5 @@
 const books = require('../model/book.js');
 const { nanoid } = require('nanoid');
-const fs = require('fs');
 
 const addBook = (request, h) => {
     const { name, year, author, summary, publisher, pageCount, readPage, reading } = request.payload;
@@ -187,7 +186,7 @@ const deleteBook = (request, h) => {
         status: 'fail',
         message: 'Buku gagal dihapus. Id tidak ditemukan',
     });
-    
+
     response.code(404);
     return response;
 }

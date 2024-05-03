@@ -4,7 +4,7 @@ const routes = require('./route/book.js');
 const init = async () => {
     const server = hapi.server({
       port: 9000,
-      host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
+      host: 'localhost',
       routes: {
         cors: {
           origin: ['*'],
